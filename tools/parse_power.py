@@ -68,9 +68,9 @@ def main():
             
             line=line.strip('\n')
             if line.endswith(':'):
-                output.append(';------------------------------------\n')
-                output.append(f';{blockPower} units of power consumed in this block\n')
-                output.append(';------------------------------------\n')
+                output.append('/*------------------------------------*/\n')
+                output.append(f'/*{blockPower} units of power consumed in this block*/\n')
+                output.append('/*------------------------------------*/\n')
                 output.append('\n')
                 output.append(f'{line}\n')
                 if blockPower > maxPower:
@@ -85,19 +85,19 @@ def main():
                     power = operations[operation]
                     blockPower += power
                     totalPower += power
-                    output.append(f'{line}\t;{power} units of power consumed\n')
+                    output.append(f'{line}\t/*{power} units of power consumed*/\n')
                 else:
                     output.append(f'{line}\n')
             ##
             line = inFile.readline()
 
     output.insert(0, (
-        f';======================================\n'
-        f';======================================\n'
-        f';{totalPower} units of power consumed for this entire file\n'
-        f';the largest block in this file consumes {maxPower} units of power\n'
-        f';======================================\n'
-        f';======================================\n\n'
+        f'/*======================================*/\n'
+        f'/*======================================*/\n'
+        f'/*{totalPower} units of power consumed for this entire file*/\n'
+        f'/*the largest block in this file consumes {maxPower} units of power*/\n'
+        f'/*======================================*/\n'
+        f'/*======================================*/\n\n'
         ))
 
     splitPath = os.path.splitext(inPath)
