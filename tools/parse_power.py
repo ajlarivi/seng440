@@ -15,6 +15,19 @@ operations = {
     'jae':7,
     'jb':7,
     'jbe':7,
+    'b':7,
+    'be':7,
+    'bne':7,
+    'bs':7,
+    'bns':7,
+    'bg':7,
+    'bge':7,
+    'bl':7,
+    'ble':7,
+    'ba':7,
+    'bae':7,
+    'bb':7,
+    'bbe':7,
 
     'imul':6,
     'imulq':6,
@@ -46,6 +59,7 @@ def main():
     inPath = sys.argv[1]
     output = []
     totalPower = 0
+    maxPower = 0
 
     with open(inPath, 'r') as inFile:
         line = inFile.readline()
@@ -53,12 +67,15 @@ def main():
         while line:
             
             line=line.strip('\n')
-            if line.startswith('.') and line.endswith(':'):
+            if line.endswith(':'):
                 output.append('#------------------------------------\n')
                 output.append(f'#{blockPower} units of power consumed in this block\n')
                 output.append('#------------------------------------\n')
                 output.append('\n')
                 output.append(f'{line}\n')
+                if blockPower > maxPower:
+                    maxPower = blockPower
+
                 blockPower = 0
             else:
                 lineSplit = line.strip().split()
@@ -77,7 +94,8 @@ def main():
     output.insert(0, (
         f'#======================================\n'
         f'#======================================\n'
-        f'#{totalPower} units of power consumed for this file\n'
+        f'#{totalPower} units of power consumed for this entire file\n'
+        f'#the largest block in this file consumes {maxPower} units of power\n'
         f'#======================================\n'
         f'#======================================\n\n'
         ))
