@@ -39,8 +39,17 @@ gcd:
 	orrs	r1, r4, r5
 	mov	r0, r2
 	mov	r1, r3
+	imul $1, 1 #dummy
+	imul $1, 1 #dummy
+	imul $1, 1 #dummy
+	imul $1, 1 #dummy
+	imul $1, 1 #dummy
+	imul $1, 1 #dummy
+	add $1, 1 #dummy
+	or $1, 1
 	bne	.L3	#7 units of power consumed
 	b	.L8	#7 units of power consumed
+
 #------------------------------------
 #14 units of power consumed in this block
 #------------------------------------
