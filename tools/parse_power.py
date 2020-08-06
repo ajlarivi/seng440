@@ -2,6 +2,20 @@ import sys
 import os
 
 operations = {
+    'jmp':7,
+    'je':7,
+    'jne':7,
+    'js':7,
+    'jns':7,
+    'jg':7,
+    'jge':7,
+    'jl':7,
+    'jle':7,
+    'ja':7,
+    'jae':7,
+    'jb':7,
+    'jbe':7,
+
     'imul':6,
     'imulq':6,
     'mulq':6,
@@ -19,14 +33,13 @@ operations = {
 
     'sal':2,
     'shl':2,
+    'sar':2
     'shr':2,
 
     'xor':1,
     'or':1,
     'and':1,
-    'not':1,
-    'movq':1,
-    'movl':1 
+    'not':1, 
 }
 
 def main():
