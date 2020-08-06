@@ -33,7 +33,7 @@ operations = {
 
     'sal':2,
     'shl':2,
-    'sar':2
+    'sar':2,
     'shr':2,
 
     'xor':1,
