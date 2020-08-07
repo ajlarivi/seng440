@@ -48,6 +48,26 @@ operations = {
     'mvn':1 
 }
 
+def main():
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('inPath', help='the path to the assembly file you want to parse')
+    parser.add_argument('-d', '--dummy', action='store_true', help='use this flag if you would like the parser to insert dummy instructions to even out power consumption of code blocks')
+    
+    args = vars(parser.parse_args())
+
+    inPath = args['inPath']
+    output, blockPowers, maxPower = parseAssembly(inPath)
+    if args['dummy']:
+        output = addDummyInstructions(output, blockPowers, maxPower)
+
+    splitPath = os.path.splitext(inPath)
+    outPath = f'{splitPath[0]}_parsed{splitPath[1]}'
+
+    with open(outPath, 'w') as outFile:
+        for line in output:
+            outFile.write(line)
+
 def parseAssembly(inPath):
     
     output = []
@@ -63,7 +83,7 @@ def parseAssembly(inPath):
             line=line.strip('\n')
             if line.endswith(':'):
                 output.append('/*------------------------------------*/\n')
-                output.append(f'/*{blockPower} units of power consumed in this block*/\n')
+                output.append(f'/*{blockPower} units of power consumed in this block (before dummy instructions)*/\n')
                 output.append('/*------------------------------------*/\n')
                 output.append('\n')
                 output.append(f'{line}\n')
@@ -83,13 +103,13 @@ def parseAssembly(inPath):
                     output.append(f'{line}\t/*{power} units of power consumed*/\n')
                 else:
                     output.append(f'{line}\n')
-            ##
+            
             line = inFile.readline()
 
     output.insert(0, f'/*======================================*/\n')
     output.insert(1, f'/*======================================*/\n')
-    output.insert(2, f'/*{totalPower} units of power consumed for this entire file*/\n')
-    output.insert(3, f'/*the largest block in this file consumes {maxPower} units of power*/\n')
+    output.insert(2, f'/*{totalPower} units of power consumed for this entire file (before dummy instructions)*/\n')
+    output.insert(3, f'/*the largest block in this file consumes {maxPower} units of power (before dummy instructions)*/\n')
     output.insert(4, f'/*======================================*/\n')
     output.insert(5, f'/*======================================*/\n')
 
@@ -103,18 +123,17 @@ def addDummyInstructions(output, blockPowers, maxPower):
     lineCounter = 0
     addDummy = False
     firstBlock = True
-    print(blockPowers[0])
     for line in output:
         lineCounter += 1
         if line.strip('\n').endswith(':') and not firstBlock:
             if addDummy:
                 instructions = computeNumInstructions(maxPower, blockPowers[blockCounter])
                 for x in range(instructions[0]):
-                    newOutput.insert(-lineCounter+1, '\tmul r15, r15 /*dummy operation*/\n')
+                    newOutput.insert(-lineCounter+1, '\tmul r15, r15 /*dummy operation, 6 units of power consumed*/\n')
                 for x in range(instructions[1]):
-                    newOutput.insert(-lineCounter+1, '\tadd r15, r15 /*dummy operation*/\n')
+                    newOutput.insert(-lineCounter+1, '\tadd r15, r15 /*dummy operation, 3 units of power consumed*/\n')
                 for x in range(instructions[2]):
-                    newOutput.insert(-lineCounter+1, '\tand r15, r15 /*dummy operation*/\n')
+                    newOutput.insert(-lineCounter+1, '\tand r15, r15 /*dummy operation, 1 unit of power consumed*/\n')
             addDummy = False
             blockCounter += 1
             lineCounter = 0
@@ -150,28 +169,6 @@ def computeNumInstructions(maxPower, blockPower):
         remainder -= 1
         one += 1
     return (six,three,one)
-
-
-def main():
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('inPath', help='the path to the assembly file you want to parse')
-    parser.add_argument('-d', '--dummy', action='store_true', help='use this flag if you would like the parser to insert dummy instructions to even out power consumption of code blocks')
-    
-    args = vars(parser.parse_args())
-    print(args['inPath'])
-
-    inPath = sys.argv[1]
-    output, blockPowers, maxPower = parseAssembly(inPath)
-    if args['dummy']:
-        output = addDummyInstructions(output, blockPowers, maxPower)
-
-    splitPath = os.path.splitext(inPath)
-    outPath = f'{splitPath[0]}_parsed{splitPath[1]}'
-
-    with open(outPath, 'w') as outFile:
-        for line in output:
-            outFile.write(line)
        	    
 
 if __name__ == "__main__":

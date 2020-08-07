@@ -1,7 +1,7 @@
 /*======================================*/
 /*======================================*/
-/*998 units of power consumed for this entire file*/
-/*the largest block in this file consumes 78 units of power*/
+/*998 units of power consumed for this entire file (before dummy instructions)*/
+/*the largest block in this file consumes 78 units of power (before dummy instructions)*/
 /*======================================*/
 /*======================================*/
 	.arch armv7-a
@@ -26,22 +26,22 @@
 	.fpu vfpv3-d16
 	.type	gcd, %function
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 gcd:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}
@@ -53,44 +53,44 @@ gcd:
 	bne	.L3	/*7 units of power consumed*/
 	b	.L8	/*7 units of power consumed*/
 /*------------------------------------*/
-/*14 units of power consumed in this block*/
+/*14 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L5:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r4, r2
 	mov	r5, r3
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L3:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r4
 	mov	r3, r5
 	bl	__aeabi_ldivmod
@@ -99,45 +99,45 @@ gcd:
 	mov	r1, r5
 	bne	.L5	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L2:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r0, r4
 	mov	r1, r5
 	pop	{r4, r5, r6, pc}
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L8:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r4, r2
 	mov	r5, r3
 	b	.L2	/*7 units of power consumed*/
@@ -149,22 +149,22 @@ gcd:
 	.fpu vfpv3-d16
 	.type	ExtEuclid, %function
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 ExtEuclid:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
@@ -180,43 +180,43 @@ ExtEuclid:
 	mov	fp, r6
 	b	.L11	/*7 units of power consumed*/
 /*------------------------------------*/
-/*14 units of power consumed in this block*/
+/*14 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L13:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r6, lr
 	mov	r7, ip
 	mov	r8, r2
 	mov	r9, r3
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L11:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r8
 	mov	r3, r9
 	bl	__aeabi_ldivmod
@@ -233,45 +233,45 @@ ExtEuclid:
 	mov	r1, r9
 	bne	.L13	/*7 units of power consumed*/
 /*------------------------------------*/
-/*25 units of power consumed in this block*/
+/*25 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L9:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r0, r6
 	mov	r1, r7
 	pop	{r3, r4, r5, r6, r7, r8, r9, r10, fp, pc}
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L12:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r6, #1
 	mov	r7, #0
 	b	.L9	/*7 units of power consumed*/
@@ -283,17 +283,17 @@ ExtEuclid:
 	.fpu vfpv3-d16
 	.type	rsa_modExp, %function
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 rsa_modExp:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	@ args = 8, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, r7, r8, r9, r10, lr}
@@ -329,65 +329,65 @@ rsa_modExp:
 	orrs	r3, r2, r3
 	bne	.L28	/*7 units of power consumed*/
 /*------------------------------------*/
-/*41 units of power consumed in this block*/
+/*41 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L15:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	add	sp, sp, #8	/*3 units of power consumed*/
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, pc}
 /*------------------------------------*/
-/*3 units of power consumed in this block*/
+/*3 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L20:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	mov	r1, r8
 	mov	r0, #1
 	add	sp, sp, #8	/*3 units of power consumed*/
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, pc}
 /*------------------------------------*/
-/*3 units of power consumed in this block*/
+/*3 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L27:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	umull	r0, r1, r9, r9	/*6 units of power consumed*/
 	mul	r10, r10, r9	/*6 units of power consumed*/
 	mov	r2, r6
@@ -402,23 +402,23 @@ rsa_modExp:
 	strd	r6, [sp]
 	bl	rsa_modExp
 /*------------------------------------*/
-/*20 units of power consumed in this block*/
+/*20 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L25:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	mov	r2, r6
 	mov	r3, r7
 	bl	__aeabi_ldivmod
@@ -428,21 +428,21 @@ rsa_modExp:
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, pc}
 /*------------------------------------*/
-/*3 units of power consumed in this block*/
+/*3 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L28:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	subs	r2, r4, #1
 	sbc	r3, r5, #0	/*3 units of power consumed*/
 	strd	r6, [sp]
@@ -455,23 +455,23 @@ rsa_modExp:
 	mov	r1, r3
 	b	.L25	/*7 units of power consumed*/
 /*------------------------------------*/
-/*25 units of power consumed in this block*/
+/*25 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L26:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r0, #1
 	bl	exit
 	.size	rsa_modExp, .-rsa_modExp
@@ -483,23 +483,23 @@ rsa_modExp:
 	.fpu vfpv3-d16
 	.type	rsa_gen_keys, %function
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 rsa_gen_keys:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	@ args = 0, pretend = 0, frame = 104
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
@@ -523,24 +523,24 @@ rsa_gen_keys:
 	rsb	r9, r10, #1	/*3 units of power consumed*/
 	movt	r4, #:upper16:i
 /*------------------------------------*/
-/*13 units of power consumed in this block*/
+/*13 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L30:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	movw	r0, #:lower16:buffer
 	mov	r3, r5
 	movw	r2, #1023
@@ -557,23 +557,23 @@ rsa_gen_keys:
 	movtne	r3, #:upper16:buffer
 	beq	.L63	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L34:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	adds	r7, r6, #1
 	adc	r1, r8, #0	/*3 units of power consumed*/
 	cmp	r2, #10
@@ -585,23 +585,23 @@ rsa_gen_keys:
 	mov	r7, r0
 	mov	r1, r2
 /*------------------------------------*/
-/*13 units of power consumed in this block*/
+/*13 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L33:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	add	r0, r9, r3	/*3 units of power consumed*/
 	ldrb	r2, [r3, #1]!	@ zero_extendqisi2
 	cmp	r2, #0
@@ -609,24 +609,24 @@ rsa_gen_keys:
 	str	r1, [sp, #8]
 	str	r0, [r4]
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L32:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r0, r5
 	bl	feof
 	cmp	r0, #0
@@ -639,24 +639,24 @@ rsa_gen_keys:
 	bl	srand
 	str	r7, [sp, #44]
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L56:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	bl	rand
 	ldr	r1, [sp, #44]
 	vmov	s16, r0	@ int
@@ -682,23 +682,23 @@ rsa_gen_keys:
 	str	r3, [r4]
 	blt	.L38	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L35:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r5
 	mov	r1, #49
 	add	r0, sp, #60	/*3 units of power consumed*/
@@ -709,21 +709,21 @@ rsa_gen_keys:
 	str	r3, [r4]
 	ble	.L35	/*7 units of power consumed*/
 /*------------------------------------*/
-/*13 units of power consumed in this block*/
+/*13 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L38:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r2, #10
 	mov	r1, #0
 	add	r0, sp, #60	/*3 units of power consumed*/
@@ -742,22 +742,22 @@ rsa_gen_keys:
 	mov	r9, #50
 	movt	r8, #:upper16:.LANCHOR0
 /*------------------------------------*/
-/*12 units of power consumed in this block*/
+/*12 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L36:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, #50
 	mov	r1, #0
 	add	r0, sp, #60	/*3 units of power consumed*/
@@ -773,16 +773,16 @@ rsa_gen_keys:
 	str	r3, [r4]
 	ble	.L36	/*7 units of power consumed*/
 /*------------------------------------*/
-/*16 units of power consumed in this block*/
+/*16 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L37:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, #10
 	mov	r1, #0
 	add	r0, sp, #60	/*3 units of power consumed*/
@@ -821,40 +821,40 @@ rsa_gen_keys:
 	mov	r1, #0
 	b	.L41	/*7 units of power consumed*/
 /*------------------------------------*/
-/*47 units of power consumed in this block*/
+/*47 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L46:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r10, r8
 	mov	fp, r9
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L41:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	mov	r2, r10
 	mov	r3, fp
 	bl	__aeabi_ldivmod
@@ -872,39 +872,39 @@ rsa_gen_keys:
 	mov	ip, #0
 	b	.L42	/*7 units of power consumed*/
 /*------------------------------------*/
-/*21 units of power consumed in this block*/
+/*21 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L47:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r8, r2
 	mov	r9, r3
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L42:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r1, ip
 	mov	r2, r4
 	mov	r3, r5
@@ -933,45 +933,45 @@ rsa_gen_keys:
 	bge	.L43	/*7 units of power consumed*/
 	ldrd	r2, [sp, #32]
 /*------------------------------------*/
-/*32 units of power consumed in this block*/
+/*32 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L44:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	adds	r8, r8, r2
 	adc	r9, r9, r3	/*3 units of power consumed*/
 	cmp	r8, #0
 	sbcs	r1, r9, #0
 	blt	.L44	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L43:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	ldrd	r2, [sp, #16]
 	movw	r0, #:lower16:.LC2
 	strd	r2, [sp]
@@ -992,45 +992,45 @@ rsa_gen_keys:
 	vldm	sp!, {d8-d10}
 	pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
 /*------------------------------------*/
-/*9 units of power consumed in this block*/
+/*9 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L63:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	adds	r7, r6, #1
 	adc	r3, r8, r3	/*3 units of power consumed*/
 	str	r3, [sp, #8]
 	b	.L32	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L62:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	movw	r3, #:lower16:stderr
 	movw	r1, #:lower16:.LC1
 	movt	r3, #:upper16:stderr
@@ -1041,13 +1041,13 @@ rsa_gen_keys:
 	mov	r0, #1
 	bl	exit
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L65:
 	.align	3
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L64:
@@ -1061,11 +1061,11 @@ rsa_gen_keys:
 	.fpu vfpv3-d16
 	.type	rsa_encrypt, %function
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 rsa_encrypt:
-	add r15, r15 /*dummy operation*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	@ args = 0, pretend = 0, frame = 32
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
@@ -1124,69 +1124,69 @@ rsa_encrypt:
 	sub	r4, r4, #8	/*3 units of power consumed*/
 	add	r4, r4, r6	/*3 units of power consumed*/
 /*------------------------------------*/
-/*75 units of power consumed in this block*/
+/*75 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L75:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r0, #0
 	mov	r1, #0
 	strd	r0, [r3, #8]!
 	cmp	r3, r4
 	bne	.L75	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L66:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	mov	r0, r6
 	add	sp, sp, #44	/*3 units of power consumed*/
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
 /*------------------------------------*/
-/*3 units of power consumed in this block*/
+/*3 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L70:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r2, [sp, #24]
 	cmp	r3, #0
 	cmpeq	r2, #1
@@ -1200,23 +1200,23 @@ rsa_encrypt:
 	sub	r4, r4, #8	/*3 units of power consumed*/
 	add	r4, r4, r6	/*3 units of power consumed*/
 /*------------------------------------*/
-/*13 units of power consumed in this block*/
+/*13 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L81:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	strd	r0, [r3, #8]!
 	cmp	r3, r4
 	bne	.L81	/*7 units of power consumed*/
@@ -1225,20 +1225,20 @@ rsa_encrypt:
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L71:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	cmp	r3, #0
 	cmpeq	r2, #1
 	beq	.L78	/*7 units of power consumed*/
@@ -1248,39 +1248,39 @@ rsa_encrypt:
 	sub	r4, r6, #8	/*3 units of power consumed*/
 	b	.L79	/*7 units of power consumed*/
 /*------------------------------------*/
-/*23 units of power consumed in this block*/
+/*23 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L102:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r1, #0
 	ldrb	r0, [r5, #1]!	@ zero_extendqisi2
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L79:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r10
 	mov	r3, fp
 	bl	__aeabi_ldivmod
@@ -1304,23 +1304,23 @@ rsa_encrypt:
 	bne	.L102	/*7 units of power consumed*/
 	b	.L66	/*7 units of power consumed*/
 /*------------------------------------*/
-/*29 units of power consumed in this block*/
+/*29 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L72:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [sp, #32]
 	mov	r2, r10
 	mov	r3, fp
@@ -1334,22 +1334,22 @@ rsa_encrypt:
 	sub	r3, r5, #1	/*3 units of power consumed*/
 	add	r8, r3, r8	/*3 units of power consumed*/
 /*------------------------------------*/
-/*13 units of power consumed in this block*/
+/*13 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L77:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrb	r0, [r5, #1]!	@ zero_extendqisi2
 	mov	r2, r10
 	mov	r3, fp
@@ -1360,24 +1360,24 @@ rsa_encrypt:
 	bne	.L77	/*7 units of power consumed*/
 	b	.L66	/*7 units of power consumed*/
 /*------------------------------------*/
-/*14 units of power consumed in this block*/
+/*14 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L67:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	movw	r3, #:lower16:stderr
 	movw	r0, #:lower16:.LC3
 	movt	r3, #:upper16:stderr
@@ -1388,22 +1388,22 @@ rsa_encrypt:
 	bl	fwrite
 	b	.L66	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L73:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	subs	r8, r2, #1
 	ldrd	r0, [sp, #32]
 	sub	r4, r4, #8	/*3 units of power consumed*/
@@ -1414,39 +1414,39 @@ rsa_encrypt:
 	str	r6, [sp, #16]
 	b	.L76	/*7 units of power consumed*/
 /*------------------------------------*/
-/*19 units of power consumed in this block*/
+/*19 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L103:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r1, #0
 	ldrb	r0, [r5, #1]!	@ zero_extendqisi2
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L76:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r10
 	mov	r3, fp
 	bl	__aeabi_ldivmod
@@ -1472,23 +1472,23 @@ rsa_encrypt:
 	ldr	r6, [sp, #16]
 	b	.L66	/*7 units of power consumed*/
 /*------------------------------------*/
-/*29 units of power consumed in this block*/
+/*29 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L78:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [sp, #32]
 	mov	r2, r10
 	mov	r3, fp
@@ -1502,22 +1502,22 @@ rsa_encrypt:
 	sub	r3, r5, #1	/*3 units of power consumed*/
 	add	r8, r3, r8	/*3 units of power consumed*/
 /*------------------------------------*/
-/*13 units of power consumed in this block*/
+/*13 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L80:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrb	r0, [r5, #1]!	@ zero_extendqisi2
 	mov	r2, r10
 	mov	r3, fp
@@ -1528,23 +1528,23 @@ rsa_encrypt:
 	bne	.L80	/*7 units of power consumed*/
 	b	.L66	/*7 units of power consumed*/
 /*------------------------------------*/
-/*14 units of power consumed in this block*/
+/*14 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L69:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r0, #1
 	bl	exit
 	.size	rsa_encrypt, .-rsa_encrypt
@@ -1555,7 +1555,7 @@ rsa_encrypt:
 	.fpu vfpv3-d16
 	.type	rsa_decrypt, %function
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 rsa_decrypt:
@@ -1616,46 +1616,46 @@ rsa_decrypt:
 	sub	r3, r7, #1	/*3 units of power consumed*/
 	b	.L118	/*7 units of power consumed*/
 /*------------------------------------*/
-/*78 units of power consumed in this block*/
+/*78 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L135:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [r9, #8]!
 	cmp	r0, #0
 	sbcs	r2, r1, #0
 	blt	.L111	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L118:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, #0
 	adds	r4, r4, #1
 	adc	r5, r5, #0	/*3 units of power consumed*/
@@ -1664,130 +1664,130 @@ rsa_decrypt:
 	strb	r2, [r3, #1]!
 	bne	.L135	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L116:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r2, r6
 	mov	r1, r7
 	mov	r0, r8
 	bl	memcpy
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L125:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r0, r7
 	bl	free
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L104:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	mov	r0, r8
 	add	sp, sp, #52	/*3 units of power consumed*/
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
 /*------------------------------------*/
-/*3 units of power consumed in this block*/
+/*3 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L112:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	lr, #1
 	ldrd	r4, [sp, #16]
 	sub	ip, r7, #1	/*3 units of power consumed*/
 	b	.L110	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L124:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [r9, #8]!
 	cmp	r0, #0
 	sbcs	r1, r1, #0
 	blt	.L111	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L110:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	adds	r2, r2, #1
 	adc	r3, r3, #0	/*3 units of power consumed*/
 	cmp	r3, r5
@@ -1800,23 +1800,23 @@ rsa_decrypt:
 	bl	memcpy
 	b	.L125	/*7 units of power consumed*/
 /*------------------------------------*/
-/*17 units of power consumed in this block*/
+/*17 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L134:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
 	movw	r3, #:lower16:stderr
 	movw	r1, #:lower16:.LC4
 	mov	r8, #0
@@ -1830,23 +1830,23 @@ rsa_decrypt:
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
 /*------------------------------------*/
-/*3 units of power consumed in this block*/
+/*3 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L113:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	sub	r10, r7, #1	/*3 units of power consumed*/
 	mov	fp, r6
 	str	r8, [sp, #8]
@@ -1856,44 +1856,44 @@ rsa_decrypt:
 	mov	r5, #0
 	b	.L123	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L136:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [r9, #8]!
 	cmp	r0, #0
 	sbcs	r3, r1, #0
 	blt	.L111	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L123:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r2, [sp, #24]
 	bl	__aeabi_ldivmod
 	adds	r4, r4, #1
@@ -1907,24 +1907,24 @@ rsa_decrypt:
 	ldr	r8, [sp, #8]
 	b	.L116	/*7 units of power consumed*/
 /*------------------------------------*/
-/*17 units of power consumed in this block*/
+/*17 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L107:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	movw	r3, #:lower16:stderr
 	movw	r0, #:lower16:.LC3
 	movt	r3, #:upper16:stderr
@@ -1936,23 +1936,23 @@ rsa_decrypt:
 	bl	fwrite
 	b	.L104	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L115:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r3, r9
 	str	r6, [sp, #8]
 	sub	r9, r7, #1	/*3 units of power consumed*/
@@ -1962,42 +1962,42 @@ rsa_decrypt:
 	mov	r8, r3
 	b	.L119	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L137:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [r8, #8]!
 	cmp	r0, #0
 	sbcs	r3, r1, #0
 	blt	.L111	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L119:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r6
 	mov	r3, r7
 	bl	__aeabi_ldivmod
@@ -2028,21 +2028,21 @@ rsa_decrypt:
 	ldr	r8, [sp, #24]
 	b	.L116	/*7 units of power consumed*/
 /*------------------------------------*/
-/*32 units of power consumed in this block*/
+/*32 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L114:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r4, [sp, #8]
 	orrs	ip, r4, r5
 	beq	.L120	/*7 units of power consumed*/
@@ -2058,42 +2058,42 @@ rsa_decrypt:
 	str	r8, [sp, #44]
 	b	.L121	/*7 units of power consumed*/
 /*------------------------------------*/
-/*20 units of power consumed in this block*/
+/*20 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L138:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [r9, #8]!
 	cmp	r0, #0
 	sbcs	r3, r1, #0
 	blt	.L111	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L121:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r10
 	mov	r3, fp
 	bl	__aeabi_ldivmod
@@ -2124,65 +2124,65 @@ rsa_decrypt:
 	ldr	r8, [sp, #44]
 	b	.L116	/*7 units of power consumed*/
 /*------------------------------------*/
-/*32 units of power consumed in this block*/
+/*32 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L120:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	sub	r3, r7, #1	/*3 units of power consumed*/
 	strd	r6, [sp, #32]
 	ldrd	r6, [sp, #24]
 	str	r3, [sp, #8]
 	b	.L122	/*7 units of power consumed*/
 /*------------------------------------*/
-/*10 units of power consumed in this block*/
+/*10 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L139:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	ldrd	r0, [r9, #8]!
 	cmp	r0, #0
 	sbcs	r3, r1, #0
 	blt	.L111	/*7 units of power consumed*/
 /*------------------------------------*/
-/*7 units of power consumed in this block*/
+/*7 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L122:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	add r15, r15 /*dummy operation*/
-	and r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	add r15, r15 /*dummy operation, 3 units of power consumed*/
+	and r15, r15 /*dummy operation, 1 unit of power consumed*/
 	mov	r2, r6
 	mov	r3, r7
 	bl	__aeabi_ldivmod
@@ -2213,23 +2213,23 @@ rsa_decrypt:
 	ldrd	r6, [sp, #32]
 	b	.L116	/*7 units of power consumed*/
 /*------------------------------------*/
-/*32 units of power consumed in this block*/
+/*32 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .L111:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	mov	r0, #1
 	bl	exit
 	.size	rsa_decrypt, .-rsa_decrypt
@@ -2242,23 +2242,23 @@ rsa_decrypt:
 	.type	MAX_DIGITS, %object
 	.size	MAX_DIGITS, 4
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 MAX_DIGITS:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	.word	50
 	.bss
 	.align	2
@@ -2266,54 +2266,54 @@ MAX_DIGITS:
 	.type	j, %object
 	.size	j, 4
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 j:
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
-	mul r15, r15 /*dummy operation*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
+	mul r15, r15 /*dummy operation, 6 units of power consumed*/
 	.space	4
 	.section	.rodata.str1.4,"aMS",%progbits,1
 	.align	2
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .LC0:
 	.ascii	"r\000"
 	.space	2
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .LC1:
 	.ascii	"Problem reading %s\012\000"
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .LC2:
 	.ascii	"primes are %lld and %lld\012\000"
 	.space	2
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .LC3:
 	.ascii	"Error: Heap allocation failed.\012\000"
 /*------------------------------------*/
-/*0 units of power consumed in this block*/
+/*0 units of power consumed in this block (before dummy instructions)*/
 /*------------------------------------*/
 
 .LC4:
