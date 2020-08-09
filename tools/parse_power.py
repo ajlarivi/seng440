@@ -139,7 +139,6 @@ def addDummyInstructions(output, blockPowers, maxPower):
             blockCounter += 1
             lineCounter = 0
         elif not firstBlock and lineStrip and (not (lineStrip.startswith('.') or lineStrip.startswith('/'))):
-            #print(lineStrip)
             addDummy = True
 
 
@@ -147,10 +146,6 @@ def addDummyInstructions(output, blockPowers, maxPower):
         if line.strip('\n').endswith(':') and firstBlock:
             firstBlock = False
             lineCounter = 0
-
-        #newOutput.append(str((not lineStrip.startswith('.') and not lineStrip.startswith('/'))))
-        
-
 
         newOutput.append(line)
         
