@@ -2,9 +2,9 @@
 #include "rsa.h"
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
-int main(int argc, char **argv)
-{
+int test(const char* message_pointer, int length){
   struct public_key_class pub[1];
   struct private_key_class priv[1];
   rsa_gen_keys(pub, priv, PRIME_SOURCE_FILE);
@@ -12,7 +12,8 @@ int main(int argc, char **argv)
   printf("Private Key:\n Modulus: %lld\n Exponent: %lld\n", (long long)priv->modulus, (long long) priv->exponent);
   printf("Public Key:\n Modulus: %lld\n Exponent: %lld\n", (long long)pub->modulus, (long long) pub->exponent);
 
-  char message[] = "There and Back Again";
+  char message[length+1];
+  strcpy(message, message_pointer);
   int i;
 
   printf("Original:\n");
@@ -44,4 +45,30 @@ int main(int argc, char **argv)
   free(encrypted);
   free(decrypted);
   return 0;
+}
+
+
+int main(int argc, char **argv)
+{
+  srand(time(0));
+
+  const char *messages[8];
+  messages[0] = "a";
+  messages[1] = "asdf";
+  messages[2] = "test";
+  messages[3] = "hello there";
+  messages[4] = "this is a longer message";
+  messages[5] = "there and back again";
+  messages[6] = "#*($)# 098 ,.! testing";
+  messages[7] = "The quick brown fox jumps over the lazy dog";
+
+  int i;
+  for(i=0; i < 8; i++){
+    printf("TEST CASE %d\n", i+1);
+    printf("==================================================\n");
+    test(messages[i], strlen(messages[i]));
+    printf("\n");
+  }
+
+
 }

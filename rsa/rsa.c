@@ -95,7 +95,7 @@ void rsa_gen_keys(struct public_key_class *pub, struct private_key_class *priv, 
   long long max = 0;
   long long phi_max = 0;
   
-  srand(time(NULL));
+  //srand(time(NULL));
   
   do{
     // a and b are the positions of p and q in the list
@@ -163,7 +163,6 @@ long long *rsa_encrypt(const char *message, const unsigned long message_size,
 
 long long getRandom(long long lower, long long upper){
   long long num = (rand() % (upper - lower +1)) + lower;
-  printf("random (working?): %lld\n", num);
   return num;
 }
 
@@ -188,10 +187,10 @@ char *rsa_decrypt(const long long *message,
     return NULL;
   }
   // Now we go through each 8-byte chunk and decrypt it.
-  srand(time(0));
+
   long long i = 0;
   for(i=0; i < message_size/8; i++){
-    long long r = getRandom(1, 50000);
+    long long r = getRandom(1, 5000);
     long long s = rsa_modExp(r, pub->exponent, priv->modulus);
     long long X = (message[i]*s) % priv->modulus;
     long long Y = rsa_modExp(X, priv->exponent, priv->modulus);
