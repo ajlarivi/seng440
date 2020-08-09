@@ -190,11 +190,14 @@ char *rsa_decrypt(const long long *message,
 
   long long i = 0;
   for(i=0; i < message_size/8; i++){
+    //BLINDING HAPPENS HERE
     long long r = getRandom(1, 5000);
     long long s = rsa_modExp(r, pub->exponent, priv->modulus);
     long long X = (message[i]*s) % priv->modulus;
     long long Y = rsa_modExp(X, priv->exponent, priv->modulus);
     temp[i] = (Y/r) % priv->modulus;
+
+    //below line would be used without blinding
     //temp[i] = rsa_modExp(message[i], priv->exponent, priv->modulus);
   }
   // The result should be a number in the char range, which gives back the original byte.
