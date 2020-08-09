@@ -9,7 +9,7 @@
 	.eabi_attribute 30, 6
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
-	.file	"rsa.c"
+	.file	"rsa_blinded.c"
 	.text
 	.comm	buffer,1024,4
 	.global	MAX_DIGITS
@@ -474,11 +474,6 @@ rsa_gen_keys:
 	mov	r2, #0
 	mov	r3, #0
 	strd	r2, [fp, #-108]
-	mov	r0, #0
-	bl	time
-	mov	r3, r0
-	mov	r0, r3
-	bl	srand
 .L29:
 	bl	rand
 	vmov	s15, r0	@ int
@@ -794,6 +789,48 @@ rsa_encrypt:
 	@ sp needed
 	pop	{r4, r5, r6, r7, r8, fp, pc}
 	.size	rsa_encrypt, .-rsa_encrypt
+	.align	2
+	.global	getRandom
+	.syntax unified
+	.arm
+	.fpu vfpv3-d16
+	.type	getRandom, %function
+getRandom:
+	@ args = 0, pretend = 0, frame = 32
+	@ frame_needed = 1, uses_anonymous_args = 0
+	push	{r4, r5, r6, r7, r8, r9, fp, lr}
+	add	fp, sp, #28
+	sub	sp, sp, #32
+	strd	r0, [fp, #-44]
+	strd	r2, [fp, #-52]
+	bl	rand
+	mov	r3, r0
+	mov	r0, r3
+	asr	r1, r0, #31
+	strd	r0, [fp, #-60]
+	ldrd	r0, [fp, #-52]
+	ldrd	r2, [fp, #-44]
+	subs	r4, r0, r2
+	sbc	r5, r1, r3
+	adds	r8, r4, #1
+	adc	r9, r5, #0
+	mov	r2, r8
+	mov	r3, r9
+	ldrd	r0, [fp, #-60]
+	bl	__aeabi_ldivmod
+	mov	r0, r2
+	mov	r1, r3
+	ldrd	r2, [fp, #-44]
+	adds	r6, r2, r0
+	adc	r7, r3, r1
+	strd	r6, [fp, #-36]
+	ldrd	r2, [fp, #-36]
+	mov	r0, r2
+	mov	r1, r3
+	sub	sp, fp, #28
+	@ sp needed
+	pop	{r4, r5, r6, r7, r8, r9, fp, pc}
+	.size	getRandom, .-getRandom
 	.section	.rodata
 	.align	2
 .LC4:
@@ -807,18 +844,19 @@ rsa_encrypt:
 	.fpu vfpv3-d16
 	.type	rsa_decrypt, %function
 rsa_decrypt:
-	@ args = 0, pretend = 0, frame = 32
+	@ args = 0, pretend = 0, frame = 64
 	@ frame_needed = 1, uses_anonymous_args = 0
-	push	{r4, r5, r6, r7, r8, r9, fp, lr}
-	add	fp, sp, #28
-	sub	sp, sp, #40
-	str	r0, [fp, #-48]
-	str	r1, [fp, #-52]
-	str	r2, [fp, #-56]
-	ldr	r3, [fp, #-52]
+	push	{r4, r5, r6, r7, fp, lr}
+	add	fp, sp, #20
+	sub	sp, sp, #72
+	str	r0, [fp, #-72]
+	str	r1, [fp, #-76]
+	str	r2, [fp, #-80]
+	str	r3, [fp, #-84]
+	ldr	r3, [fp, #-76]
 	and	r3, r3, #7
 	cmp	r3, #0
-	beq	.L40
+	beq	.L42
 	movw	r3, #:lower16:stderr
 	movt	r3, #:upper16:stderr
 	ldr	r3, [r3]
@@ -828,25 +866,25 @@ rsa_decrypt:
 	mov	r0, r3
 	bl	fprintf
 	mov	r3, #0
-	b	.L41
-.L40:
-	ldr	r3, [fp, #-52]
+	b	.L43
+.L42:
+	ldr	r3, [fp, #-76]
 	lsr	r3, r3, #3
 	mov	r0, r3
 	bl	malloc
 	mov	r3, r0
-	str	r3, [fp, #-40]
-	ldr	r0, [fp, #-52]
+	str	r3, [fp, #-32]
+	ldr	r0, [fp, #-76]
 	bl	malloc
 	mov	r3, r0
-	str	r3, [fp, #-44]
-	ldr	r3, [fp, #-40]
+	str	r3, [fp, #-36]
+	ldr	r3, [fp, #-32]
 	cmp	r3, #0
-	beq	.L42
-	ldr	r3, [fp, #-44]
+	beq	.L44
+	ldr	r3, [fp, #-36]
 	cmp	r3, #0
-	bne	.L43
-.L42:
+	bne	.L45
+.L44:
 	movw	r3, #:lower16:stderr
 	movt	r3, #:upper16:stderr
 	ldr	r3, [r3]
@@ -856,81 +894,124 @@ rsa_decrypt:
 	movt	r0, #:upper16:.LC3
 	bl	fwrite
 	mov	r3, #0
-	b	.L41
-.L43:
-	mov	r2, #0
-	mov	r3, #0
-	strd	r2, [fp, #-36]
-	mov	r2, #0
-	mov	r3, #0
-	strd	r2, [fp, #-36]
-	b	.L44
+	b	.L43
 .L45:
-	ldr	r3, [fp, #-36]
-	lsl	r3, r3, #3
-	ldr	r2, [fp, #-48]
-	add	r3, r2, r3
-	ldrd	r0, [r3]
-	ldr	r3, [fp, #-56]
-	ldrd	r8, [r3, #8]
-	ldr	r3, [fp, #-56]
+	mov	r2, #0
+	mov	r3, #0
+	strd	r2, [fp, #-28]
+	mov	r2, #0
+	mov	r3, #0
+	strd	r2, [fp, #-28]
+	b	.L46
+.L47:
+	movw	r2, #5000
+	mov	r3, #0
+	mov	r0, #1
+	mov	r1, #0
+	bl	getRandom
+	strd	r0, [fp, #-44]
+	ldr	r3, [fp, #-84]
+	ldrd	r0, [r3, #8]
+	ldr	r3, [fp, #-80]
 	ldrd	r2, [r3]
 	strd	r2, [sp]
-	mov	r2, r8
-	mov	r3, r9
+	mov	r2, r0
+	mov	r3, r1
+	ldrd	r0, [fp, #-44]
 	bl	rsa_modExp
-	ldr	r3, [fp, #-36]
-	ldr	r2, [fp, #-44]
+	strd	r0, [fp, #-52]
+	ldr	r3, [fp, #-28]
+	lsl	r3, r3, #3
+	ldr	r2, [fp, #-72]
+	add	r3, r2, r3
+	ldrd	r2, [r3]
+	ldr	r1, [fp, #-52]
+	mul	r0, r3, r1
+	ldr	r1, [fp, #-48]
+	mul	r1, r2, r1
+	add	ip, r0, r1
+	ldr	r1, [fp, #-52]
+	umull	r0, r1, r1, r2
+	add	r3, ip, r1
+	mov	r1, r3
+	ldr	r3, [fp, #-80]
+	ldrd	r2, [r3]
+	bl	__aeabi_ldivmod
+	strd	r2, [fp, #-60]
+	ldr	r3, [fp, #-80]
+	ldrd	r0, [r3, #8]
+	ldr	r3, [fp, #-80]
+	ldrd	r2, [r3]
+	strd	r2, [sp]
+	mov	r2, r0
+	mov	r3, r1
+	ldrd	r0, [fp, #-60]
+	bl	rsa_modExp
+	strd	r0, [fp, #-68]
+	ldrd	r2, [fp, #-44]
+	ldrd	r0, [fp, #-68]
+	bl	__aeabi_ldivmod
+	mov	r2, r0
+	mov	r3, r1
+	mov	r0, r2
+	mov	r1, r3
+	ldr	r3, [fp, #-80]
+	ldrd	r2, [r3]
+	bl	__aeabi_ldivmod
+	mov	r0, r2
+	mov	r1, r3
+	ldr	r3, [fp, #-28]
+	ldr	r2, [fp, #-36]
 	add	r3, r2, r3
 	uxtb	r2, r0
 	strb	r2, [r3]
-	ldrd	r2, [fp, #-36]
+	ldrd	r2, [fp, #-28]
 	adds	r6, r2, #1
 	adc	r7, r3, #0
-	strd	r6, [fp, #-36]
-.L44:
-	ldr	r3, [fp, #-52]
-	lsr	r3, r3, #3
-	mov	r2, r3
-	mov	r3, #0
-	ldrd	r0, [fp, #-36]
-	cmp	r0, r2
-	sbcs	r3, r1, r3
-	blt	.L45
-	mov	r2, #0
-	mov	r3, #0
-	strd	r2, [fp, #-36]
-	b	.L46
-.L47:
-	ldr	r3, [fp, #-36]
-	ldr	r2, [fp, #-44]
-	add	r2, r2, r3
-	ldr	r3, [fp, #-36]
-	ldr	r1, [fp, #-40]
-	add	r3, r1, r3
-	ldrb	r2, [r2]	@ zero_extendqisi2
-	strb	r2, [r3]
-	ldrd	r2, [fp, #-36]
-	adds	r4, r2, #1
-	adc	r5, r3, #0
-	strd	r4, [fp, #-36]
+	strd	r6, [fp, #-28]
 .L46:
-	ldr	r3, [fp, #-52]
+	ldr	r3, [fp, #-76]
 	lsr	r3, r3, #3
 	mov	r2, r3
 	mov	r3, #0
-	ldrd	r0, [fp, #-36]
+	ldrd	r0, [fp, #-28]
 	cmp	r0, r2
 	sbcs	r3, r1, r3
 	blt	.L47
-	ldr	r0, [fp, #-44]
+	mov	r2, #0
+	mov	r3, #0
+	strd	r2, [fp, #-28]
+	b	.L48
+.L49:
+	ldr	r3, [fp, #-28]
+	ldr	r2, [fp, #-36]
+	add	r2, r2, r3
+	ldr	r3, [fp, #-28]
+	ldr	r1, [fp, #-32]
+	add	r3, r1, r3
+	ldrb	r2, [r2]	@ zero_extendqisi2
+	strb	r2, [r3]
+	ldrd	r2, [fp, #-28]
+	adds	r4, r2, #1
+	adc	r5, r3, #0
+	strd	r4, [fp, #-28]
+.L48:
+	ldr	r3, [fp, #-76]
+	lsr	r3, r3, #3
+	mov	r2, r3
+	mov	r3, #0
+	ldrd	r0, [fp, #-28]
+	cmp	r0, r2
+	sbcs	r3, r1, r3
+	blt	.L49
+	ldr	r0, [fp, #-36]
 	bl	free
-	ldr	r3, [fp, #-40]
-.L41:
+	ldr	r3, [fp, #-32]
+.L43:
 	mov	r0, r3
-	sub	sp, fp, #28
+	sub	sp, fp, #20
 	@ sp needed
-	pop	{r4, r5, r6, r7, r8, r9, fp, pc}
+	pop	{r4, r5, r6, r7, fp, pc}
 	.size	rsa_decrypt, .-rsa_decrypt
 	.ident	"GCC: (GNU) 8.2.1 20180801 (Red Hat 8.2.1-2)"
 	.section	.note.GNU-stack,"",%progbits
