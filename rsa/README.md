@@ -1,9 +1,7 @@
 RSA-Library
 ===========
+based on code written by Andrew Kiluk.
 
-This is a C library for RSA encryption. It provides three functions for key generation, encryption, and decryption.
-Detailed descriptions of these functions are provided in the header file rsa.h.
+Andrew Kiluk, “RSA-Library,” https://github.com 
+[Online] Available:  https://github.com/andrewkiluk/RSA-Library [Accessed: July 14, 2020]
 
-I make no claim that any good encyrption practices are used here. Probably don't use this for any production purposes.
-
-Created by Andrew Kiluk
