@@ -161,10 +161,17 @@ long long *rsa_encrypt(const char *message, const unsigned long message_size,
   return encrypted;
 }
 
+long long getRandom(long long lower, long long upper){
+  long long num = (rand() % (upper - lower +1)) + lower;
+  printf("random (working?): %lld\n", num);
+  return num;
+}
+
 
 char *rsa_decrypt(const long long *message, 
                   const unsigned long message_size, 
-                  const struct private_key_class *priv)
+                  const struct private_key_class *priv,
+                  const struct public_key_class *pub)
 {
   if(message_size % sizeof(long long) != 0){
     fprintf(stderr,
@@ -181,9 +188,15 @@ char *rsa_decrypt(const long long *message,
     return NULL;
   }
   // Now we go through each 8-byte chunk and decrypt it.
+  srand(time(0));
   long long i = 0;
   for(i=0; i < message_size/8; i++){
-    temp[i] = rsa_modExp(message[i], priv->exponent, priv->modulus);
+    long long r = getRandom(1, 50000);
+    long long s = rsa_modExp(r, pub->exponent, priv->modulus);
+    long long X = (message[i]*s) % priv->modulus;
+    long long Y = rsa_modExp(X, priv->exponent, priv->modulus);
+    temp[i] = (Y/r) % priv->modulus;
+    //temp[i] = rsa_modExp(message[i], priv->exponent, priv->modulus);
   }
   // The result should be a number in the char range, which gives back the original byte.
   // We put that into decrypted, then return.

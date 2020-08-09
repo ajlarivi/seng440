@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     printf("%c %lld\n", (char)encrypted[i], (long long)encrypted[i]);
   }
 
-  char *decrypted = rsa_decrypt(encrypted, 8*sizeof(message), priv);
+  char *decrypted = rsa_decrypt(encrypted, 8*sizeof(message), priv, pub);
   if (!decrypted){
     fprintf(stderr, "Error in decryption!\n");
     return 1;

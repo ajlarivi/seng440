@@ -129,7 +129,7 @@ def addDummyInstructions(output, blockPowers, maxPower):
             if addDummy:
                 instructions = computeNumInstructions(maxPower, blockPowers[blockCounter])
                 for x in range(instructions[0]):
-                    newOutput.insert(-lineCounter+1, '\tmul r15, r15 /*dummy operation, 6 units of power consumed*/\n')
+                    newOutput.insert(-lineCounter+1, '\tmul r14, r14 /*dummy operation, 6 units of power consumed*/\n')
                 for x in range(instructions[1]):
                     newOutput.insert(-lineCounter+1, '\tadd r15, r15 /*dummy operation, 3 units of power consumed*/\n')
                 for x in range(instructions[2]):

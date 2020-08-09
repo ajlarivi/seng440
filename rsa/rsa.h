@@ -34,6 +34,6 @@ long long *rsa_encrypt(const char *message, const unsigned long message_size, co
 // array containing the decrypted data, or NULL upon failure. This pointer should be freed when 
 // you are finished. The variable message_size is the size in bytes of the encrypted message. 
 // The decrypted data will be 1/8th the size of the encrypted data.
-char *rsa_decrypt(const long long *message, const unsigned long message_size, const struct private_key_class *pub);
+char *rsa_decrypt(const long long *message, const unsigned long message_size, const struct private_key_class *priv, const struct public_key_class *pub);
 
 #endif

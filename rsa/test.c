@@ -12,7 +12,7 @@ int main(int argc, char **argv)
   printf("Private Key:\n Modulus: %lld\n Exponent: %lld\n", (long long)priv->modulus, (long long) priv->exponent);
   printf("Public Key:\n Modulus: %lld\n Exponent: %lld\n", (long long)pub->modulus, (long long) pub->exponent);
 
-  char message[] = "There And Back Again";
+  char message[] = "Is this working?";
   int i;
 
   printf("Original:\n");
@@ -30,7 +30,7 @@ int main(int argc, char **argv)
     printf("%c %lld\n", (char)encrypted[i], (long long)encrypted[i]);
   }
 
-  char *decrypted = rsa_decrypt(encrypted, 8*sizeof(message), priv);
+  char *decrypted = rsa_decrypt(encrypted, 8*sizeof(message), priv, pub);
   if (!decrypted){
     fprintf(stderr, "Error in decryption!\n");
     return 1;
