@@ -61,10 +61,10 @@ int main(int argc, char **argv)
   messages[5] = "there and back again";
   messages[6] = "#*($)# 098 ,.! testing";
   messages[7] = "The quick brown fox jumps over the lazy dog";
-  messages[8] = "This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256.!"
+  messages[8] = "This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256.!";
 
   int i;
-  for(i=0; i < 8; i++){
+  for(i=0; i < 9; i++){
     printf("TEST CASE %d\n", i+1);
     printf("==================================================\n");
     test(messages[i], strlen(messages[i]));
