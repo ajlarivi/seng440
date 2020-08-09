@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 {
   srand(time(0));
 
-  const char *messages[8];
+  const char *messages[9];
   messages[0] = "a";
   messages[1] = "asdf";
   messages[2] = "test";
@@ -61,6 +61,7 @@ int main(int argc, char **argv)
   messages[5] = "there and back again";
   messages[6] = "#*($)# 098 ,.! testing";
   messages[7] = "The quick brown fox jumps over the lazy dog";
+  messages[8] = "This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256. This is a string of length 256.!"
 
   int i;
   for(i=0; i < 8; i++){
