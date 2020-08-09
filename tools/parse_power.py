@@ -125,6 +125,7 @@ def addDummyInstructions(output, blockPowers, maxPower):
     firstBlock = True
     for line in output:
         lineCounter += 1
+        lineStrip = line.strip()
         if line.strip('\n').endswith(':') and not firstBlock:
             if addDummy:
                 instructions = computeNumInstructions(maxPower, blockPowers[blockCounter])
@@ -137,15 +138,18 @@ def addDummyInstructions(output, blockPowers, maxPower):
             addDummy = False
             blockCounter += 1
             lineCounter = 0
+        elif not firstBlock and lineStrip and (not (lineStrip.startswith('.') or lineStrip.startswith('/'))):
+            #print(lineStrip)
+            addDummy = True
+
+
 
         if line.strip('\n').endswith(':') and firstBlock:
             firstBlock = False
             lineCounter = 0
 
-        lineStrip = line.strip()
-
-        if lineStrip and not lineStrip.startswith('.') and not lineStrip.startswith('/'):
-            addDummy = True
+        #newOutput.append(str((not lineStrip.startswith('.') and not lineStrip.startswith('/'))))
+        
 
 
         newOutput.append(line)
