@@ -131,7 +131,7 @@ def addDummyInstructions(output, blockPowers, maxPower):
             if addDummy:
                 instructions = computeNumInstructions(maxPower, blockPowers[blockCounter])
                 for x in range(instructions[0]):
-                    num = random.randint(11,15)
+                    num = random.randint(11,14)
                     newOutput.insert(-lineCounter+1, f'\tmul r{num}, r{num} /*dummy operation, 6 units of power consumed*/\n')
                 for x in range(instructions[1]):
                     num = random.randint(11,15)
